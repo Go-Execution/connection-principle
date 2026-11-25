@@ -9,6 +9,7 @@ import {
   Sparkle,
   UsersThree,
   AirplaneTilt,
+  ShieldStar,
 } from "@phosphor-icons/react/dist/ssr";
 import { Navbar } from "@/components/Navbar";
 import { CrystalQueenMark, CrystalDiamondRule } from "@/components/CrystalQueenMark";
@@ -22,7 +23,6 @@ import {
   CRUISE_PROGRAMS,
   LEGACY_CHAMPIONS,
   SELF_MASTERY_PILLARS,
-  COLLECTION_ITEMS,
 } from "@/data/siteContent";
 
 export default function HomePage() {
@@ -32,7 +32,7 @@ export default function HomePage() {
 
       <main id="top" className="relative">
         {/* =========================================================
-            SECTION 1: ASYMMETRIC ATELIER HERO (Strict 4-Element Stack)
+            SECTION 1: ASYMMETRIC ATELIER HERO (Standing Crystal Queen Portrait)
            ========================================================= */}
         <section
           aria-label="Introduction"
@@ -72,17 +72,17 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="#legacy"
+                    href="#books"
                     data-agent="hero-secondary-cta"
                     className="inline-flex items-center gap-2.5 rounded-full border border-[#F5F2EB]/16 bg-[#101014] px-6 py-4 text-sm font-semibold text-[#F5F2EB] transition-all duration-200 hover:border-[#C9A44C]/55 hover:bg-[#17171D] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080A]"
                   >
                     <Play size={15} weight="fill" className="text-[#C9A44C]" />
-                    <span>Watch Greg Harden Tribute</span>
+                    <span>Sample Chapters & Books</span>
                   </a>
                 </div>
               </div>
 
-              {/* Right Column: Clean Studio Portrait with Crystal & Gold Queen Chess Piece */}
+              {/* Right Column: Full-Length Standing Portrait Next to Giant Crystal Queen Chess Piece */}
               <div className="lg:col-span-5">
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   <div
@@ -90,13 +90,13 @@ export default function HomePage() {
                     className="absolute -inset-3 rounded-[32px] bg-gradient-to-b from-[#C9A44C]/25 via-transparent to-[#C9A44C]/10 blur-xl"
                   />
                   <div className="relative crystal-card-gold overflow-hidden rounded-[28px] p-2">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[22px]">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[22px]">
                       <img
-                        src="/images/hero-carla-throne.webp"
-                        alt="Carla Wilson, MSW seated in black and gold beside an illuminated faceted crystal Queen chess piece"
+                        src="/images/hero-carla-standing-clean.webp"
+                        alt="Carla Wilson, MSW standing in a tailored black suit on a marble chessboard floor beside a giant faceted crystal Queen chess piece"
                         className="h-full w-full object-cover object-top"
                       />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08080A] via-[#08080A]/55 to-transparent p-6 pt-16">
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08080A] via-[#08080A]/60 to-transparent p-6 pt-16">
                         <div className="flex items-end justify-between gap-4">
                           <div>
                             <p className="font-display text-2xl font-semibold text-[#F5F2EB]">
@@ -153,7 +153,7 @@ export default function HomePage() {
               <Reveal className="lg:col-span-6 space-y-6">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#C9A44C]/35 bg-[#101014] px-4 py-1.5 text-xs font-medium text-[#DFBE6F]">
                   <Sparkle size={14} weight="fill" className="text-[#C9A44C]" />
-                  <span>Primary Practice: Guided Meditation & Group Rooms</span>
+                  <span>Primary Passion: Guided Meditation, Retreats & Group Facilitation</span>
                 </div>
 
                 <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-[#F5F2EB]">
@@ -189,6 +189,28 @@ export default function HomePage() {
                       </h3>
                       <p className="mt-1 text-sm text-[#A6A39B] leading-relaxed">
                         Interactive group architecture built around emotional intelligence, personal accountability, and real-life application rather than isolated one-on-one coaching.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sunset Guided Meditation Retreat Visual */}
+                <div className="crystal-card overflow-hidden rounded-2xl p-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+                    <img
+                      src="/images/retreat-santorini-meditation.webp"
+                      alt="Carla Wilson leading an outdoor sunset guided meditation retreat"
+                      className="sm:col-span-5 h-36 w-full rounded-xl object-cover"
+                    />
+                    <div className="sm:col-span-7 px-2 py-1 space-y-1">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#C9A44C]">
+                        Luxury Wellness & Retreats
+                      </span>
+                      <p className="font-display text-xl font-semibold text-[#F5F2EB]">
+                        My Circle Reflects My Growth
+                      </p>
+                      <p className="text-xs text-[#A6A39B] leading-relaxed">
+                        From correctional facilities in Michigan to coastal meditation terraces and ocean voyages, Carla creates spaces where guests release old attachments and choose emotional maturity.
                       </p>
                     </div>
                   </div>
@@ -231,7 +253,7 @@ export default function HomePage() {
               </a>
             </Reveal>
 
-            {/* 4-Card Sea-Day Program Grid (Exact 4 cells = 4 programs) */}
+            {/* 4-Card Sea-Day Program Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {CRUISE_PROGRAMS.map((prog, idx) => (
                 <Reveal
@@ -265,7 +287,10 @@ export default function HomePage() {
             </div>
 
             {/* Cruise Director Logistics Bar */}
-            <Reveal delay={0.15} className="mt-8 crystal-card-gold rounded-2xl p-6 sm:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <Reveal
+              delay={0.15}
+              className="mt-8 crystal-card-gold rounded-2xl p-6 sm:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+            >
               <div className="flex items-start sm:items-center gap-4">
                 <div className="rounded-xl bg-[#C9A44C]/20 p-3 text-[#C9A44C]">
                   <AirplaneTilt size={22} />
@@ -275,7 +300,7 @@ export default function HomePage() {
                     Ready-to-Sail Enrichment Logistics for Cruise Directors
                   </p>
                   <p className="mt-0.5 text-xs sm:text-sm text-[#A6A39B]">
-                    Multi-topic 3 to 10 sea-day repertoire • Zero-WiFi guest reflection kits • Single wireless lavalier or handheld mic setup • International travel ready.
+                    Multi-topic 3 to 10 sea-day repertoire • Unplugged guest reflection sessions • Single wireless lavalier or handheld mic setup • International travel ready.
                   </p>
                 </div>
               </div>
@@ -304,7 +329,19 @@ export default function HomePage() {
                 </h2>
 
                 <p className="text-base text-[#A6A39B] leading-relaxed">
-                  Carla Wilson, MSW graduated <strong className="text-[#F5F2EB] font-semibold">with Distinction</strong> in the Inaugural Cohort of the Hardenian Gems Academy and stepped into the personal business role of the late <strong className="text-[#F5F2EB] font-semibold">Greg Harden</strong> at <strong className="text-[#F5F2EB] font-semibold">GSHA Quality Services</strong>.
+                  Carla Wilson, MSW graduated{" "}
+                  <strong className="text-[#F5F2EB] font-semibold">
+                    with Distinction
+                  </strong>{" "}
+                  in the Inaugural Cohort of the Hardenian Gems Academy and stepped into the personal business role of the late{" "}
+                  <strong className="text-[#F5F2EB] font-semibold">
+                    Greg Harden
+                  </strong>{" "}
+                  at{" "}
+                  <strong className="text-[#F5F2EB] font-semibold">
+                    GSHA Quality Services
+                  </strong>
+                  .
                 </p>
 
                 <p className="text-base text-[#A6A39B] leading-relaxed">
@@ -357,24 +394,47 @@ export default function HomePage() {
         </section>
 
         {/* =========================================================
-            SECTION 6: ABOUT CARLA WILSON, MSW & 5 PILLARS OF SELF-MASTERY
+            SECTION 6: ABOUT CARLA WILSON, MSW & REAL CREDENTIALS
            ========================================================= */}
         <section
           id="about"
           className="border-y border-[#F5F2EB]/[0.08] bg-[#101014]/55 py-24 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              {/* Left Portrait Pairing */}
-              <Reveal className="lg:col-span-5 space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              {/* Left Portrait & Real Washtenaw County Sheriff Shadowbox Pairing */}
+              <Reveal className="lg:col-span-5 space-y-5">
                 <div className="crystal-card overflow-hidden rounded-3xl p-2">
                   <img
-                    src="/images/carla-portrait-lobby.webp"
-                    alt="Close-up portrait of Carla Wilson, MSW in black blazer with gold satin blouse"
-                    className="aspect-[4/5] w-full rounded-[22px] object-cover object-top"
+                    src="/images/carla-paris-portrait.webp"
+                    alt="Editorial portrait of Carla Wilson, MSW seated by a Paris window with the Eiffel Tower visible behind her"
+                    className="aspect-square w-full rounded-[22px] object-cover object-top"
                   />
                 </div>
 
+                {/* Washtenaw County Sheriff Corporal Retirement Shadowbox Card */}
+                <div className="crystal-card-gold rounded-2xl p-5 flex items-center gap-4">
+                  <img
+                    src="/images/carla-sheriff-shadowbox.webp"
+                    alt="Carla Wilson, MSW holding her Washtenaw County Sheriff Corporal retirement shadowbox (10-21-91 thru 10-1-16)"
+                    className="h-24 w-24 shrink-0 rounded-xl object-cover border border-[#C9A44C]/40"
+                  />
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#DFBE6F]">
+                      <ShieldStar size={16} weight="fill" className="text-[#C9A44C]" />
+                      <span>Washtenaw County Sheriff Corporal (Ret.)</span>
+                    </div>
+                    <p className="mt-1 font-mono text-[11px] text-[#F5F2EB]">
+                      10-21-1991 thru 10-01-2016 • 25 Years Sworn Service
+                    </p>
+                    <p className="mt-1 text-xs text-[#A6A39B] leading-relaxed">
+                      Pictured with her official retirement shadowbox housing her Corporal badges, service honors, and first book{" "}
+                      <em className="text-[#F5F2EB]">What If I&apos;m Right?</em>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hardenian Certificate Card */}
                 <div className="crystal-card rounded-2xl p-5 flex items-center gap-4">
                   <img
                     src="/images/carla-certificate-clean.webp"
@@ -384,10 +444,10 @@ export default function HomePage() {
                   <div>
                     <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#DFBE6F]">
                       <SealCheck size={16} weight="fill" className="text-[#C9A44C]" />
-                      <span>Certificate of Distinction</span>
+                      <span>Certificate of Hardenian Mastery</span>
                     </div>
                     <p className="mt-1 text-xs text-[#A6A39B] leading-relaxed">
-                      Master of Social Work (MSW) • Retired Corrections Deputy • Behavioral Architect & Author based in Michigan.
+                      Master of Social Work (MSW) • Published as Carla Wilson, MSW & Carla Bragg Wilson.
                     </p>
                   </div>
                 </div>
@@ -400,7 +460,7 @@ export default function HomePage() {
                     Thirty Years Guiding People Beyond Survival Into Self-Mastery.
                   </h2>
                   <p className="text-base sm:text-lg text-[#A6A39B] leading-relaxed max-w-[62ch]">
-                    Carla Wilson, MSW brings a rare combination of clinical depth and lived authority. Across thirty years as a Corrections Deputy, licensed social worker, author, and emotional intelligence strategist, she has helped thousands navigate re-entry, recovery, leadership pressure, and personal reinvention.
+                    Carla Wilson, MSW (also published as Carla Bragg Wilson) brings a rare combination of clinical depth and lived frontline authority. Across twenty-five years as a Corporal with the Washtenaw County Sheriff&apos;s Office and over thirty years in social work, re-entry, and personal transformation, she pioneered the use of guided meditation and emotional intelligence where people needed it most.
                   </p>
                   <p className="font-display text-2xl italic leading-[1.2] pb-1 text-[#DFBE6F]">
                     &ldquo;Know Better. Do Better. Live Better. The single person we truly control is ourselves.&rdquo;
@@ -429,22 +489,48 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
+
+                {/* Beyond Survival Editorial Shelf Preview */}
+                <div className="crystal-card overflow-hidden rounded-2xl p-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                    <img
+                      src="/images/beyond-survival-shelf.webp"
+                      alt="Beyond Survival Emotional Intelligence framed feature and Your Move collection display"
+                      className="sm:col-span-5 h-44 w-full rounded-xl object-cover"
+                    />
+                    <div className="sm:col-span-7 pr-3 space-y-2">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#C9A44C]">
+                        Beyond Survival • The Confidence Edit
+                      </span>
+                      <h3 className="font-display text-2xl font-semibold text-[#F5F2EB]">
+                        Power Isn&apos;t Control. Power Is Choice.
+                      </h3>
+                      <p className="text-xs sm:text-sm text-[#A6A39B] leading-relaxed">
+                        &ldquo;You&apos;ve survived the storm. Now walk in your purpose. The life you prayed for begins here.&rdquo;
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </Reveal>
             </div>
           </div>
         </section>
 
         {/* =========================================================
-            SECTION 7: SAMPLE STORIES & FORTHCOMING BOOK
+            SECTION 7: BOOKS, CHAPTER SAMPLES & HOW TO PURCHASE
            ========================================================= */}
-        <section id="stories" className="py-24 lg:py-32">
+        <section id="books" className="py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <Reveal className="max-w-2xl space-y-4 mb-14">
+            <Reveal className="max-w-3xl space-y-4 mb-14">
+              {/* Eyebrow #3 of 3 max on entire page */}
+              <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#C9A44C]">
+                Published Works • Chapter Samples • How to Purchase
+              </p>
               <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-[#F5F2EB]">
-                Sample Four Stories From the Connection Principle Library.
+                Read Chapter Samples & Purchase Carla Wilson&apos;s Books.
               </h2>
               <p className="text-base sm:text-lg text-[#A6A39B] leading-relaxed">
-                Explore four signature reflections ahead of Carla Wilson&apos;s forthcoming book cover reveal this week, written for readers, retreat guests, and broadcast producers.
+                Explore published titles by Carla Wilson, MSW (Carla Bragg Wilson) on Amazon, read four chapter excerpts right below, and follow her new manuscript as it prepares for its New York Times Square feature.
               </p>
             </Reveal>
 
@@ -455,97 +541,12 @@ export default function HomePage() {
         </section>
 
         {/* =========================================================
-            SECTION 8: THE "YOUR MOVE" SIGNATURE SUITE & TRAVEL COLLECTION
+            SECTION 8: BROADCAST MEDIA DESK & BOOKING CONCIERGE
            ========================================================= */}
         <section
-          id="collection"
-          className="border-y border-[#F5F2EB]/[0.08] bg-[#101014]/65 py-24 lg:py-32"
+          id="booking"
+          className="border-t border-[#F5F2EB]/[0.08] bg-[#101014]/45 py-24 lg:py-32"
         >
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-14">
-            <Reveal className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-              <div className="max-w-2xl space-y-3">
-                {/* Eyebrow #3 of 3 max on entire page */}
-                <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#C9A44C]">
-                  The Your Move Collection
-                </p>
-                <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-[#F5F2EB]">
-                  Tactile Tools for Thought, Travel & Group Reflection.
-                </h2>
-              </div>
-
-              <a
-                href="#booking"
-                data-agent="collection-bulk-cta"
-                className="self-start lg:self-auto inline-flex items-center gap-2 rounded-full bg-[#C9A44C] px-6 py-3.5 text-sm font-semibold text-[#08080A] transition-all hover:bg-[#DFBE6F] hover:scale-[1.01] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
-              >
-                <span>Inquire for Retreat & Voyage Editions</span>
-                <ArrowUpRight size={16} weight="bold" />
-              </a>
-            </Reveal>
-
-            {/* Full Marble Table Showcase */}
-            <Reveal className="crystal-card-gold overflow-hidden rounded-3xl p-2 sm:p-3">
-              <div className="relative overflow-hidden rounded-2xl">
-                <img
-                  src="/images/your-move-suite-full.webp"
-                  alt="Coach Carla Wilson MSW showcasing the complete Your Move collection: hardcover book, guided journal, coloring reflection guide, Mastery Pen trio, and travel essentials"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </Reveal>
-
-            {/* 4 Signature Product Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {COLLECTION_ITEMS.map((item, idx) => (
-                <Reveal
-                  key={item.id}
-                  delay={idx * 0.06}
-                  className="crystal-card rounded-3xl overflow-hidden flex flex-col justify-between transition-colors hover:border-[#C9A44C]/45"
-                >
-                  <div>
-                    <div className="aspect-[4/4.4] w-full overflow-hidden bg-[#08080A] p-3">
-                      <img
-                        src={item.image}
-                        alt={item.imageAlt}
-                        className="h-full w-full rounded-2xl object-cover object-top"
-                      />
-                    </div>
-                    <div className="p-6 space-y-3">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#C9A44C]">
-                        {item.tag}
-                      </span>
-                      <h3 className="font-display text-2xl font-semibold text-[#F5F2EB] leading-snug">
-                        {item.name}
-                      </h3>
-                      <p className="text-xs font-medium text-[#DFBE6F]">
-                        {item.subtitle}
-                      </p>
-                      <ul className="space-y-2 pt-2 text-xs text-[#A6A39B] leading-relaxed">
-                        {item.details.map((d, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#C9A44C]" />
-                            <span>{d}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="px-6 py-4 border-t border-[#F5F2EB]/[0.07] bg-[#08080A]/50">
-                    <p className="font-mono text-[11px] text-[#F5F2EB]">
-                      {item.highlight}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* =========================================================
-            SECTION 9: BROADCAST MEDIA DESK & BOOKING CONCIERGE
-           ========================================================= */}
-        <section id="booking" className="py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-14">
             <Reveal className="max-w-2xl space-y-4">
               <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-[#F5F2EB]">
@@ -576,12 +577,20 @@ export default function HomePage() {
                   Connection Principle
                 </p>
                 <p className="text-xs text-[#A6A39B]">
-                  Carla Wilson, MSW • Guided Meditation Facilitator, Speaker, Author & Behavioral Architect
+                  Carla Wilson, MSW (Carla Bragg Wilson) • Guided Meditation Facilitator, Speaker & Author
                 </p>
               </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 text-sm">
+              <a
+                href="https://a.co/d/0btsX1XG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#DFBE6F] hover:text-[#F5F2EB] transition-colors"
+              >
+                What If I&apos;m Right? on Amazon
+              </a>
               <a
                 href="mailto:carlawilsonmsw@gmail.com"
                 className="text-[#F5F2EB] hover:text-[#C9A44C] transition-colors"

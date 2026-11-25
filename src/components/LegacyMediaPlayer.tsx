@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { Play, Television, Certificate, X, ArrowUpRight } from "@phosphor-icons/react";
+import {
+  Play,
+  Television,
+  Certificate,
+  ShieldStar,
+  X,
+  ArrowUpRight,
+} from "@phosphor-icons/react";
 
 interface VideoFeature {
   id: string;
@@ -32,12 +39,12 @@ const VIDEO_FEATURES: VideoFeature[] = [
       "The foundational philosophy of self-defined purpose, emotional honesty, and personal mastery taught inside the Hardenian Gems Academy where Carla Wilson graduated with distinction.",
   },
   {
-    id: "carla-stage-reel",
-    tag: "UPCOMING SPEAKER REEL",
-    title: "Carla Wilson, MSW: Keynote & TED-Style Talk Preview",
-    duration: "Filming & Release Slate",
+    id: "times-square-and-stage",
+    tag: "NYC TIMES SQUARE & KEYNOTE REEL",
+    title: "Carla Wilson, MSW: NYC Times Square Feature & TED-Style Stage Footage",
+    duration: "Upcoming Footage Slot",
     description:
-      "New stage footage, guided meditation cinema, and TED-style keynote segments from Carla Wilson are currently in production for broadcast producers and cruise enrichment directors.",
+      "Carla's forthcoming New York Times Square book billboard footage and new TED-style keynote stage reel will be featured right here upon release.",
   },
 ];
 
@@ -126,21 +133,21 @@ export function LegacyMediaPlayer() {
           ) : (
             <div className="relative flex h-full w-full flex-col items-center justify-center p-8 text-center">
               <img
-                src="/images/carla-live-stage.webp"
-                alt="Carla Wilson speaking live on stage with microphone"
+                src="/images/carla-retreat-collage.webp"
+                alt="Carla Wilson speaking on stage and leading guided meditation retreats"
                 className="absolute inset-0 h-full w-full object-cover opacity-30"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#08080A] via-[#08080A]/75 to-[#08080A]/60" />
               <div className="relative z-10 max-w-md space-y-4">
                 <span className="inline-flex items-center gap-2 rounded-full border border-[#C9A44C]/40 bg-[#17171D]/90 px-3.5 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-[#C9A44C]">
                   <Television size={14} />
-                  <span>Keynote & TED-Style Showcase</span>
+                  <span>NYC Times Square & TED-Style Reel</span>
                 </span>
                 <h4 className="font-display text-2xl sm:text-3xl font-semibold text-[#F5F2EB]">
-                  Broadcast & Stage Footage Coming Soon
+                  Times Square Billboard & Stage Footage Coming Soon
                 </h4>
                 <p className="text-sm text-[#A6A39B] leading-relaxed">
-                  Event producers and cruise directors can request Carla&apos;s live speaking sample and broadcast commentary packet directly below.
+                  Carla&apos;s book will be featured in New York&apos;s Times Square as part of her publisher campaign. Times Square video footage and new keynote clips will be added here upon release.
                 </p>
                 <a
                   href="#booking"
@@ -173,8 +180,8 @@ export function LegacyMediaPlayer() {
         </div>
       </div>
 
-      {/* Credential Verification Thumbnails */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* 3 Instant Credibility Thumbnails (Greg Harden Tribute, Certificate of Distinction, Sheriff Retirement Shadowbox) */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
         <button
           type="button"
           data-agent="open-hardenian-feature-modal"
@@ -186,21 +193,21 @@ export function LegacyMediaPlayer() {
                 "Inaugural Hardenian Gems Academy Cohort Tribute featuring Greg Harden and Carla Wilson, MSW.",
             })
           }
-          className="group crystal-card flex items-center gap-4 rounded-2xl p-4 text-left transition-all duration-200 hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
+          className="group crystal-card flex items-center gap-3.5 rounded-2xl p-3.5 text-left transition-all duration-200 hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
         >
           <img
             src="/images/greg-harden-and-carla.webp"
             alt="Greg Harden standing arm-in-arm pointing proudly to Carla Wilson"
-            className="h-16 w-20 shrink-0 rounded-xl object-cover border border-[#F5F2EB]/10"
+            className="h-14 w-16 shrink-0 rounded-xl object-cover border border-[#F5F2EB]/10"
           />
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#C9A44C]">
-              Official Academy Tribute
+          <div className="min-w-0">
+            <span className="block font-mono text-[10px] uppercase tracking-[0.15em] text-[#C9A44C]">
+              Academy Tribute
             </span>
-            <p className="mt-0.5 text-sm font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
-              Greg Harden & Carla Wilson
+            <p className="mt-0.5 truncate text-xs font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
+              Greg Harden & Carla
             </p>
-            <p className="text-xs text-[#A6A39B]">Click to inspect full academy feature</p>
+            <p className="text-[11px] text-[#A6A39B]">Click to enlarge</p>
           </div>
         </button>
 
@@ -215,22 +222,52 @@ export function LegacyMediaPlayer() {
                 "Carla Wilson, MSW holding her Certificate of Hardenian Mastery and Hardenian Academy Society recognition.",
             })
           }
-          className="group crystal-card flex items-center gap-4 rounded-2xl p-4 text-left transition-all duration-200 hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
+          className="group crystal-card flex items-center gap-3.5 rounded-2xl p-3.5 text-left transition-all duration-200 hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
         >
           <img
             src="/images/carla-certificate-clean.webp"
             alt="Carla Wilson holding framed Certificate of Hardenian Mastery"
-            className="h-16 w-20 shrink-0 rounded-xl object-cover object-top border border-[#F5F2EB]/10"
+            className="h-14 w-16 shrink-0 rounded-xl object-cover object-top border border-[#F5F2EB]/10"
           />
-          <div>
-            <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#C9A44C]">
+          <div className="min-w-0">
+            <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[#C9A44C]">
               <Certificate size={12} />
-              <span>Graduated With Distinction</span>
+              <span>Distinction</span>
             </span>
-            <p className="mt-0.5 text-sm font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
-              Certificate of Hardenian Mastery
+            <p className="mt-0.5 truncate text-xs font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
+              Hardenian Mastery
             </p>
-            <p className="text-xs text-[#A6A39B]">Click to view credential portrait</p>
+            <p className="text-[11px] text-[#A6A39B]">Click to enlarge</p>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          data-agent="open-sheriff-shadowbox-modal"
+          onClick={() =>
+            setLightboxImage({
+              src: "/images/carla-sheriff-shadowbox.webp",
+              alt: "Carla Wilson MSW holding her Washtenaw County Sheriff Corporal retirement shadowbox (1991 to 2016)",
+              caption:
+                "Washtenaw County Sheriff's Office Retirement Shadowbox: Corporal Carla Wilson, MSW (10-21-91 thru 10-1-16), featuring her badges, service stars, and book What If I'm Right?.",
+            })
+          }
+          className="group crystal-card flex items-center gap-3.5 rounded-2xl p-3.5 text-left transition-all duration-200 hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
+        >
+          <img
+            src="/images/carla-sheriff-shadowbox.webp"
+            alt="Carla Wilson holding her Washtenaw County Sheriff Corporal retirement shadowbox"
+            className="h-14 w-16 shrink-0 rounded-xl object-cover object-top border border-[#F5F2EB]/10"
+          />
+          <div className="min-w-0">
+            <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[#C9A44C]">
+              <ShieldStar size={12} />
+              <span>1991 to 2016</span>
+            </span>
+            <p className="mt-0.5 truncate text-xs font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
+              Sheriff Shadowbox
+            </p>
+            <p className="text-[11px] text-[#A6A39B]">Click to enlarge</p>
           </div>
         </button>
       </div>

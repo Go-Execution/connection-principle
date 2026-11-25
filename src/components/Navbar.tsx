@@ -9,8 +9,8 @@ const NAV_LINKS = [
   { label: "Cruise & Speaking", href: "#cruise" },
   { label: "Harden Legacy", href: "#legacy" },
   { label: "About", href: "#about" },
-  { label: "Sample Stories", href: "#stories" },
-  { label: "Your Move Suite", href: "#collection" },
+  { label: "Books & Chapters", href: "#books" },
+  { label: "Press & Booking", href: "#booking" },
 ];
 
 export function Navbar() {

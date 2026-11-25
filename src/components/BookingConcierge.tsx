@@ -21,13 +21,13 @@ type InquiryCategory =
   | "Keynote Lecture & Workshop"
   | "Your Move Books & Retreat Collection";
 
-const PRESS_BIO_TEXT = `CARLA WILSON, MSW | BROADCAST & CRUISE ENRICHMENT FACT SHEET
+const PRESS_BIO_TEXT = `CARLA WILSON, MSW (CARLA BRAGG WILSON) | BROADCAST & CRUISE ENRICHMENT FACT SHEET
 Founder, Connection Principle | Guided Meditation Facilitator, Speaker & Author
 Email: carlawilsonmsw@gmail.com | Direct: 1 (734) 660-4355 | Base: Ann Arbor / Detroit Metro, MI
 
-• 30+ Years in Human Transformation: Retired Corrections Deputy and Master of Social Work (MSW) specializing in emotional intelligence, accountability, re-entry, and personal growth.
+• 30+ Years in Human Transformation: Retired Washtenaw County Sheriff Corporal (1991 to 2016) and Master of Social Work (MSW) specializing in guided meditation, emotional intelligence, accountability, re-entry, and personal growth.
 • Hardenian Legacy & GSHA Quality Services: Graduated with Distinction in the Inaugural Cohort of the Hardenian Gems Academy and stepped into the role of the late Greg Harden (legendary performance counselor to 7x Super Bowl Champion Tom Brady and 23x Olympic Gold Medalist Michael Phelps) in his personal business at GSHA Quality Services.
-• Signature Programs: Guided Meditation sanctuaries, Luxury Cruise Line Enrichment series, institutional workshops, network television commentary, and author of "What If I'm Right?" plus the forthcoming "Your Move: Heal Your Thoughts. Change Your Life."`;
+• Published Books & NYC Times Square Feature: Author of "What If I'm Right?: A Book That Celebrates Spiritual Intuition" (https://a.co/d/0btsX1XG), Co-Author and Editor of "Serving Productive Time" with Tom Lagana (credited as Carla Bragg Wilson), and author of the forthcoming manuscript "Your Move: Heal Your Thoughts. Change Your Life." slated for a New York Times Square billboard feature.`;
 
 export function BookingConcierge() {
   const [category, setCategory] = useState<InquiryCategory>(
