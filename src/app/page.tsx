@@ -15,6 +15,7 @@ import { Navbar } from "@/components/Navbar";
 import { CrystalQueenMark, CrystalDiamondRule } from "@/components/CrystalQueenMark";
 import { MeditationSanctuary } from "@/components/MeditationSanctuary";
 import { LegacyMediaPlayer } from "@/components/LegacyMediaPlayer";
+import { TourShowcase } from "@/components/TourShowcase";
 import { StorySampler } from "@/components/StorySampler";
 import { BookingConcierge } from "@/components/BookingConcierge";
 import { Reveal } from "@/components/Reveal";
@@ -72,12 +73,12 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="#books"
+                    href="#tour"
                     data-agent="hero-secondary-cta"
                     className="inline-flex items-center gap-2.5 rounded-full border border-[#F5F2EB]/16 bg-[#101014] px-6 py-4 text-sm font-semibold text-[#F5F2EB] transition-all duration-200 hover:border-[#C9A44C]/55 hover:bg-[#17171D] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080A]"
                   >
                     <Play size={15} weight="fill" className="text-[#C9A44C]" />
-                    <span>Sample Chapters & Books</span>
+                    <span>Watch Movement Reel</span>
                   </a>
                 </div>
               </div>
@@ -194,23 +195,27 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Sunset Guided Meditation Retreat Visual */}
-                <div className="crystal-card overflow-hidden rounded-2xl p-2.5">
-                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+                {/* Guided Meditation Facilitator Card + Sunset Retreat Pairing */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="crystal-card overflow-hidden rounded-2xl p-2">
+                    <img
+                      src="/images/carla-guided-meditation-card.webp"
+                      alt="Carla Wilson, MSW: Guided Meditation Facilitator and Emotional Intelligence Strategist"
+                      className="aspect-[3/4] w-full rounded-xl object-cover object-top"
+                    />
+                  </div>
+                  <div className="crystal-card overflow-hidden rounded-2xl p-2 flex flex-col justify-between">
                     <img
                       src="/images/retreat-santorini-meditation.webp"
                       alt="Carla Wilson leading an outdoor sunset guided meditation retreat"
-                      className="sm:col-span-5 h-36 w-full rounded-xl object-cover"
+                      className="aspect-square w-full rounded-xl object-cover"
                     />
-                    <div className="sm:col-span-7 px-2 py-1 space-y-1">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#C9A44C]">
-                        Luxury Wellness & Retreats
+                    <div className="p-3 space-y-1">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#C9A44C]">
+                        Destination Retreats
                       </span>
-                      <p className="font-display text-xl font-semibold text-[#F5F2EB]">
-                        My Circle Reflects My Growth
-                      </p>
-                      <p className="text-xs text-[#A6A39B] leading-relaxed">
-                        From correctional facilities in Michigan to coastal meditation terraces and ocean voyages, Carla creates spaces where guests release old attachments and choose emotional maturity.
+                      <p className="font-display text-lg font-semibold text-[#F5F2EB]">
+                        Find Your Center. Move With Intention.
                       </p>
                     </div>
                   </div>
@@ -232,8 +237,8 @@ export default function HomePage() {
           className="border-y border-[#F5F2EB]/[0.08] bg-[#101014]/60 py-24 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <Reveal className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
-              <div className="max-w-2xl space-y-4">
+            <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-14">
+              <div className="lg:col-span-8 space-y-5">
                 <div className="inline-flex items-center gap-2 text-xs font-mono text-[#C9A44C]">
                   <Compass size={16} />
                   <span>Turnkey Guest Enrichment for World Voyages & Ocean Crossings</span>
@@ -241,16 +246,33 @@ export default function HomePage() {
                 <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-[#F5F2EB]">
                   Curated for Luxury Cruise Ships & Discerning Voyagers.
                 </h2>
+                <p className="max-w-[58ch] text-base sm:text-lg text-[#A6A39B] leading-relaxed">
+                  Stage-ready with wireless headset microphone and zero-WiFi guest workshops designed to anchor ocean crossings, wellness decks, and main-theater sea days.
+                </p>
+                <div className="pt-1">
+                  <a
+                    href="#booking"
+                    data-agent="cruise-syllabus-cta"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#C9A44C]/50 bg-[#17171D] px-6 py-3.5 text-sm font-semibold text-[#F5F2EB] transition-all hover:bg-[#C9A44C] hover:text-[#08080A] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
+                  >
+                    <span>Request Cruise Enrichment Syllabus</span>
+                    <ArrowUpRight size={16} weight="bold" />
+                  </a>
+                </div>
               </div>
 
-              <a
-                href="#booking"
-                data-agent="cruise-syllabus-cta"
-                className="self-start lg:self-auto inline-flex items-center gap-2 rounded-full border border-[#C9A44C]/50 bg-[#17171D] px-6 py-3.5 text-sm font-semibold text-[#F5F2EB] transition-all hover:bg-[#C9A44C] hover:text-[#08080A] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
-              >
-                <span>Request Cruise Enrichment Syllabus</span>
-                <ArrowUpRight size={16} weight="bold" />
-              </a>
+              {/* Clean Headset Mic Stage Throne Portrait */}
+              <div className="lg:col-span-4">
+                <div className="crystal-card-gold overflow-hidden rounded-3xl p-2 max-w-xs mx-auto lg:ml-auto lg:mr-0">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+                    <img
+                      src="/images/carla-stage-mic-throne.webp"
+                      alt="Carla Wilson, MSW seated with wireless stage headset microphone beside the illuminated crystal Queen piece"
+                      className="h-full w-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+              </div>
             </Reveal>
 
             {/* 4-Card Sea-Day Program Grid */}
@@ -385,7 +407,7 @@ export default function HomePage() {
                 </div>
               </Reveal>
 
-              {/* Right Video Documentary Player & Credential Portraits */}
+              {/* Right Video Documentary Player & 4 Credential Portraits */}
               <Reveal delay={0.12} className="lg:col-span-7">
                 <LegacyMediaPlayer />
               </Reveal>
@@ -394,12 +416,23 @@ export default function HomePage() {
         </section>
 
         {/* =========================================================
-            SECTION 6: ABOUT CARLA WILSON, MSW & REAL CREDENTIALS
+            SECTION 6: THE TOUR, 2026 CONFERENCES & MOVEMENT VIDEO REEL
            ========================================================= */}
         <section
-          id="about"
-          className="border-y border-[#F5F2EB]/[0.08] bg-[#101014]/55 py-24 lg:py-32"
+          id="tour"
+          className="border-y border-[#F5F2EB]/[0.08] bg-[#101014]/65 py-24 lg:py-32"
         >
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <Reveal>
+              <TourShowcase />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* =========================================================
+            SECTION 7: ABOUT CARLA WILSON, MSW & REAL CREDENTIALS
+           ========================================================= */}
+        <section id="about" className="py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               {/* Left Portrait & Real Washtenaw County Sheriff Shadowbox Pairing */}
@@ -517,9 +550,12 @@ export default function HomePage() {
         </section>
 
         {/* =========================================================
-            SECTION 7: BOOKS, CHAPTER SAMPLES & HOW TO PURCHASE
+            SECTION 8: BOOKS, CHAPTER SAMPLES & HOW TO PURCHASE
            ========================================================= */}
-        <section id="books" className="py-24 lg:py-32">
+        <section
+          id="books"
+          className="border-y border-[#F5F2EB]/[0.08] bg-[#101014]/55 py-24 lg:py-32"
+        >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal className="max-w-3xl space-y-4 mb-14">
               {/* Eyebrow #3 of 3 max on entire page */}
@@ -541,12 +577,9 @@ export default function HomePage() {
         </section>
 
         {/* =========================================================
-            SECTION 8: BROADCAST MEDIA DESK & BOOKING CONCIERGE
+            SECTION 9: BROADCAST MEDIA DESK & BOOKING CONCIERGE
            ========================================================= */}
-        <section
-          id="booking"
-          className="border-t border-[#F5F2EB]/[0.08] bg-[#101014]/45 py-24 lg:py-32"
-        >
+        <section id="booking" className="py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-14">
             <Reveal className="max-w-2xl space-y-4">
               <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.08] text-[#F5F2EB]">

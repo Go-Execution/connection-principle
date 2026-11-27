@@ -6,6 +6,7 @@ import {
   Television,
   Certificate,
   ShieldStar,
+  Trophy,
   X,
   ArrowUpRight,
 } from "@phosphor-icons/react";
@@ -40,11 +41,11 @@ const VIDEO_FEATURES: VideoFeature[] = [
   },
   {
     id: "times-square-and-stage",
-    tag: "NYC TIMES SQUARE & KEYNOTE REEL",
-    title: "Carla Wilson, MSW: NYC Times Square Feature & TED-Style Stage Footage",
+    tag: "NYC TIMES SQUARE & STAGE",
+    title: "Carla Wilson, MSW: NYC Times Square Feature & TED-Style Footage",
     duration: "Upcoming Footage Slot",
     description:
-      "Carla's forthcoming New York Times Square book billboard footage and new TED-style keynote stage reel will be featured right here upon release.",
+      "Carla's forthcoming New York Times Square book billboard footage and new TED-style keynote stage clips will be featured right here upon release.",
   },
 ];
 
@@ -147,14 +148,14 @@ export function LegacyMediaPlayer() {
                   Times Square Billboard & Stage Footage Coming Soon
                 </h4>
                 <p className="text-sm text-[#A6A39B] leading-relaxed">
-                  Carla&apos;s book will be featured in New York&apos;s Times Square as part of her publisher campaign. Times Square video footage and new keynote clips will be added here upon release.
+                  Carla&apos;s book will be featured in New York&apos;s Times Square as part of her publisher campaign. Watch her live Movement Reel below or request her speaker packet.
                 </p>
                 <a
-                  href="#booking"
-                  data-agent="legacy-request-reel"
+                  href="#tour"
+                  data-agent="legacy-jump-to-reel"
                   className="inline-flex items-center gap-2 rounded-full bg-[#C9A44C] px-5 py-2.5 text-xs font-semibold text-[#08080A] transition-all hover:bg-[#DFBE6F] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
                 >
-                  <span>Request Live Speaker Packet</span>
+                  <span>Watch Official Movement Reel</span>
                   <ArrowUpRight size={14} weight="bold" />
                 </a>
               </div>
@@ -180,8 +181,8 @@ export function LegacyMediaPlayer() {
         </div>
       </div>
 
-      {/* 3 Instant Credibility Thumbnails (Greg Harden Tribute, Certificate of Distinction, Sheriff Retirement Shadowbox) */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+      {/* 4 Instant Credibility Thumbnails (Academy Tribute, Certificate, G-Certified Champions Card, Performance Coach) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         <button
           type="button"
           data-agent="open-hardenian-feature-modal"
@@ -207,7 +208,7 @@ export function LegacyMediaPlayer() {
             <p className="mt-0.5 truncate text-xs font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
               Greg Harden & Carla
             </p>
-            <p className="text-[11px] text-[#A6A39B]">Click to enlarge</p>
+            <p className="text-[11px] text-[#A6A39B]">Click to enlarge feature</p>
           </div>
         </button>
 
@@ -237,37 +238,67 @@ export function LegacyMediaPlayer() {
             <p className="mt-0.5 truncate text-xs font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
               Hardenian Mastery
             </p>
-            <p className="text-[11px] text-[#A6A39B]">Click to enlarge</p>
+            <p className="text-[11px] text-[#A6A39B]">Click to enlarge certificate</p>
           </div>
         </button>
 
         <button
           type="button"
-          data-agent="open-sheriff-shadowbox-modal"
+          data-agent="open-g-certified-modal"
           onClick={() =>
             setLightboxImage({
-              src: "/images/carla-sheriff-shadowbox.webp",
-              alt: "Carla Wilson MSW holding her Washtenaw County Sheriff Corporal retirement shadowbox (1991 to 2016)",
+              src: "/images/hardenian-g-certified-card.webp",
+              alt: "G-Certified Hardenian Gems Academy Legacy of Excellence card featuring Greg Harden, Tom Brady, Michael Phelps, Desmond Howard, and Warde Manuel",
               caption:
-                "Washtenaw County Sheriff's Office Retirement Shadowbox: Corporal Carla Wilson, MSW (10-21-91 thru 10-1-16), featuring her badges, service stars, and book What If I'm Right?.",
+                "G-Certified | Hardenian Gems Academy Legacy of Excellence & Direct Booking Card.",
             })
           }
           className="group crystal-card flex items-center gap-3.5 rounded-2xl p-3.5 text-left transition-all duration-200 hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
         >
           <img
-            src="/images/carla-sheriff-shadowbox.webp"
-            alt="Carla Wilson holding her Washtenaw County Sheriff Corporal retirement shadowbox"
+            src="/images/hardenian-g-certified-card.webp"
+            alt="G-Certified Hardenian Gems Academy card"
+            className="h-14 w-16 shrink-0 rounded-xl object-cover object-center border border-[#F5F2EB]/10"
+          />
+          <div className="min-w-0">
+            <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[#C9A44C]">
+              <Trophy size={12} />
+              <span>G-Certified</span>
+            </span>
+            <p className="mt-0.5 truncate text-xs font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
+              Legacy of Excellence
+            </p>
+            <p className="text-[11px] text-[#A6A39B]">Click to view roster card</p>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          data-agent="open-performance-coach-modal"
+          onClick={() =>
+            setLightboxImage({
+              src: "/images/carla-performance-coach.webp",
+              alt: "Carla Wilson, MSW: Performance Coach and Emotional Intelligence Strategist",
+              caption:
+                "Performance Coach & Emotional Intelligence Strategist: Strengthening the Person Behind the Performance.",
+            })
+          }
+          className="group crystal-card flex items-center gap-3.5 rounded-2xl p-3.5 text-left transition-all duration-200 hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
+        >
+          <img
+            src="/images/carla-performance-coach.webp"
+            alt="Carla Wilson Performance Coach crystal Queen portrait"
             className="h-14 w-16 shrink-0 rounded-xl object-cover object-top border border-[#F5F2EB]/10"
           />
           <div className="min-w-0">
             <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[#C9A44C]">
               <ShieldStar size={12} />
-              <span>1991 to 2016</span>
+              <span>Performance Coach</span>
             </span>
             <p className="mt-0.5 truncate text-xs font-semibold text-[#F5F2EB] group-hover:text-[#DFBE6F]">
-              Sheriff Shadowbox
+              GSHA Standard
             </p>
-            <p className="text-[11px] text-[#A6A39B]">Click to enlarge</p>
+            <p className="text-[11px] text-[#A6A39B]">Click to enlarge card</p>
           </div>
         </button>
       </div>
