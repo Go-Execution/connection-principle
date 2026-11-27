@@ -151,7 +151,7 @@ export function LegacyMediaPlayer() {
                   Carla&apos;s book will be featured in New York&apos;s Times Square as part of her publisher campaign. Watch her live Movement Reel below or request her speaker packet.
                 </p>
                 <a
-                  href="#tour"
+                  href="/services#tour"
                   data-agent="legacy-jump-to-reel"
                   className="inline-flex items-center gap-2 rounded-full bg-[#C9A44C] px-5 py-2.5 text-xs font-semibold text-[#08080A] transition-all hover:bg-[#DFBE6F] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
                 >

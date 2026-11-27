@@ -12,7 +12,8 @@ import {
   ShieldStar,
 } from "@phosphor-icons/react/dist/ssr";
 import { Navbar } from "@/components/Navbar";
-import { CrystalQueenMark, CrystalDiamondRule } from "@/components/CrystalQueenMark";
+import { Footer } from "@/components/Footer";
+import { CrystalDiamondRule } from "@/components/CrystalQueenMark";
 import { MeditationSanctuary } from "@/components/MeditationSanctuary";
 import { LegacyMediaPlayer } from "@/components/LegacyMediaPlayer";
 import { TourShowcase } from "@/components/TourShowcase";
@@ -83,33 +84,20 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Right Column: Full-Length Standing Portrait Next to Giant Crystal Queen Chess Piece */}
+              {/* Right Column: Keynote Portrait ("Heal Your Thoughts. Change Your Life. It's Your Move.") */}
               <div className="lg:col-span-5">
-                <div className="relative mx-auto max-w-md lg:max-w-none">
+                <div className="relative mx-auto max-w-[430px] lg:ml-auto lg:mr-0">
                   <div
                     aria-hidden="true"
                     className="absolute -inset-3 rounded-[32px] bg-gradient-to-b from-[#C9A44C]/25 via-transparent to-[#C9A44C]/10 blur-xl"
                   />
                   <div className="relative crystal-card-gold overflow-hidden rounded-[28px] p-2">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[22px]">
+                    <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px] bg-[#08080A]">
                       <img
-                        src="/images/hero-carla-standing-clean.webp"
-                        alt="Carla Wilson, MSW standing in a tailored black suit on a marble chessboard floor beside a giant faceted crystal Queen chess piece"
+                        src="/images/carla-heal-thoughts-keynote.webp"
+                        alt="Carla Wilson, MSW keynote portrait: Heal Your Thoughts. Change Your Life. Turn life experience into self-awareness, purpose and action. It's Your Move."
                         className="h-full w-full object-cover object-top"
                       />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08080A] via-[#08080A]/60 to-transparent p-6 pt-16">
-                        <div className="flex items-end justify-between gap-4">
-                          <div>
-                            <p className="font-display text-2xl font-semibold text-[#F5F2EB]">
-                              Carla Wilson, MSW
-                            </p>
-                            <p className="text-xs text-[#DFBE6F]">
-                              Guided Meditation Facilitator • Speaker • Author
-                            </p>
-                          </div>
-                          <CrystalQueenMark className="h-9 w-9 shrink-0" />
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -597,58 +585,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* =========================================================
-          FOOTER
-         ========================================================= */}
-      <footer className="border-t border-[#F5F2EB]/10 bg-[#08080A] py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-[#F5F2EB]/[0.08]">
-            <div className="flex items-center gap-4">
-              <CrystalQueenMark className="h-11 w-11" />
-              <div>
-                <p className="font-display text-2xl font-semibold text-[#F5F2EB]">
-                  Connection Principle
-                </p>
-                <p className="text-xs text-[#A6A39B]">
-                  Carla Wilson, MSW (Carla Bragg Wilson) • Guided Meditation Facilitator, Speaker & Author
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-6 text-sm">
-              <a
-                href="https://a.co/d/0btsX1XG"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#DFBE6F] hover:text-[#F5F2EB] transition-colors"
-              >
-                What If I&apos;m Right? on Amazon
-              </a>
-              <a
-                href="mailto:carlawilsonmsw@gmail.com"
-                className="text-[#F5F2EB] hover:text-[#C9A44C] transition-colors"
-              >
-                carlawilsonmsw@gmail.com
-              </a>
-              <a
-                href="tel:+17346604355"
-                className="font-mono text-[#DFBE6F] hover:text-[#F5F2EB] transition-colors"
-              >
-                1 (734) 660-4355
-              </a>
-            </div>
-          </div>
-
-          <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#A6A39B]">
-            <p>
-              © {new Date().getFullYear()} Connection Principle PLLC & Your Move. All rights reserved.
-            </p>
-            <p>
-              Hardenian Gems Academy Graduate with Distinction • Continuing the Legacy at GSHA Quality Services
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

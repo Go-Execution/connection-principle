@@ -20,12 +20,12 @@ const TOUR_POSTERS = [
     alt: "Carla Wilson, MSW: The Tour, Guided Meditation Facilitator and Emotional Intelligence Strategist",
   },
   {
-    id: "heal-thoughts",
+    id: "crystal-queen-standing",
     tag: "KEYNOTE STAGE",
-    title: "Heal Your Thoughts. Change Your Life.",
-    caption: "Turning life experience into self-awareness, purpose, and deliberate action.",
-    src: "/images/carla-heal-thoughts-keynote.webp",
-    alt: "Carla Wilson, MSW keynote poster: Heal Your Thoughts. Change Your Life. It's Your Move.",
+    title: "Change the Game with Emotional Intelligence",
+    caption: "Standing in strength beside the Crystal Queen chess piece.",
+    src: "/images/hero-carla-standing-clean.webp",
+    alt: "Carla Wilson, MSW standing in a black suit on a marble chessboard beside a faceted crystal Queen chess piece",
   },
   {
     id: "world-stage",
@@ -176,7 +176,7 @@ export function TourShowcase() {
             Servicing communities locally, nationally, and globally for 2026 and 2027 bookings.
           </p>
           <a
-            href="#booking"
+            href="/contact"
             data-agent="tour-book-cta"
             className="inline-flex items-center gap-2 rounded-full bg-[#C9A44C] px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#08080A] transition-all hover:bg-[#DFBE6F] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
           >

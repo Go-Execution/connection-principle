@@ -130,7 +130,7 @@ export function StorySampler() {
               <ArrowUpRight size={15} weight="bold" />
             </a>
             <a
-              href="#booking"
+              href="/contact"
               data-agent="times-square-press-cta"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[#F5F2EB]/16 bg-[#08080A]/80 px-6 py-3 text-xs font-semibold text-[#F5F2EB] transition-all hover:border-[#C9A44C]/50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
             >

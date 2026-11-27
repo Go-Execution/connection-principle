@@ -1,20 +1,21 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { List, X, PhoneCall, ArrowUpRight } from "@phosphor-icons/react";
 import { CrystalQueenMark } from "./CrystalQueenMark";
 
 const NAV_LINKS = [
-  { label: "Meditation", href: "#meditation" },
-  { label: "Cruises", href: "#cruise" },
-  { label: "Legacy", href: "#legacy" },
-  { label: "The Tour", href: "#tour" },
-  { label: "About", href: "#about" },
-  { label: "Books", href: "#books" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services & Tour", href: "/services" },
+  { label: "Books & Chapters", href: "/books" },
 ];
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-[#F5F2EB]/[0.08] bg-[#08080A]/88 backdrop-blur-xl">
@@ -22,8 +23,8 @@ export function Navbar() {
         aria-label="Primary navigation"
         className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 sm:px-6 lg:px-8"
       >
-        <a
-          href="#top"
+        <Link
+          href="/"
           data-agent="nav-brand-home"
           className="group flex shrink-0 items-center gap-2.5 rounded-lg py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080A]"
         >
@@ -36,20 +37,28 @@ export function Navbar() {
               Carla Wilson, MSW
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Single-line Desktop Links */}
-        <div className="hidden lg:flex items-center gap-5 xl:gap-7 shrink-0">
-          {NAV_LINKS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              data-agent={`nav-link-${item.href.slice(1)}`}
-              className="whitespace-nowrap shrink-0 text-[13px] xl:text-sm font-medium text-[#A6A39B] transition-colors duration-200 hover:text-[#F5F2EB] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080A] rounded px-1 py-1"
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
+          {NAV_LINKS.map((item) => {
+            const active = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                data-agent={`nav-link-${item.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                aria-current={active ? "page" : undefined}
+                className={`whitespace-nowrap shrink-0 text-[13px] xl:text-sm font-medium transition-colors duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080A] rounded px-1 py-1 ${
+                  active
+                    ? "text-[#DFBE6F]"
+                    : "text-[#A6A39B] hover:text-[#F5F2EB]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Right Actions (Single-line, never wraps) */}
@@ -62,14 +71,14 @@ export function Navbar() {
             <PhoneCall size={14} weight="regular" className="shrink-0 text-[#C9A44C]" />
             <span>1 (734) 660-4355</span>
           </a>
-          <a
-            href="#booking"
+          <Link
+            href="/contact"
             data-agent="nav-book-cta"
             className="inline-flex whitespace-nowrap shrink-0 items-center gap-2 rounded-full bg-[#C9A44C] px-5 py-2.5 text-[13px] font-semibold text-[#08080A] shadow-[0_8px_24px_-6px_rgba(201,164,76,0.45)] transition-all duration-200 hover:bg-[#DFBE6F] hover:scale-[1.01] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080A]"
           >
-            <span>Book & Press</span>
+            <span>Contact & Booking</span>
             <ArrowUpRight size={15} weight="bold" className="shrink-0" />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu toggle */}
@@ -89,16 +98,21 @@ export function Navbar() {
       {mobileOpen && (
         <div className="lg:hidden border-t border-[#F5F2EB]/10 bg-[#101014]/98 px-6 py-6 backdrop-blur-2xl">
           <div className="flex flex-col gap-2">
-            {NAV_LINKS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-[#F5F2EB] transition-colors hover:bg-[#17171D] hover:text-[#C9A44C] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C]"
-              >
-                {item.label}
-              </a>
-            ))}
+            {NAV_LINKS.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-[#17171D] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A44C] ${
+                    active ? "text-[#DFBE6F]" : "text-[#F5F2EB] hover:text-[#C9A44C]"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <div className="mt-4 flex flex-col gap-3 border-t border-[#F5F2EB]/10 pt-4">
               <a
                 href="tel:+17346604355"
@@ -107,14 +121,14 @@ export function Navbar() {
                 <PhoneCall size={16} className="text-[#C9A44C]" />
                 <span>1 (734) 660-4355</span>
               </a>
-              <a
-                href="#booking"
+              <Link
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C9A44C] px-5 py-3 text-sm font-semibold text-[#08080A] active:scale-[0.98]"
               >
-                <span>Book & Press</span>
+                <span>Contact & Booking</span>
                 <ArrowUpRight size={16} weight="bold" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

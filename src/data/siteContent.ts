@@ -201,7 +201,7 @@ export const PUBLISHED_BOOKS: PublishedBook[] = [
     ],
     coverImage: "/images/crop-book-your-move.webp",
     coverAlt: "Prototype cover of Your Move: Heal Your Thoughts. Change Your Life. featuring the golden Queen chess piece",
-    purchaseUrl: "#booking",
+    purchaseUrl: "/contact",
     purchaseCta: "Reserve Pre-Order & Event Copies",
     sampleStoryId: "queens-position",
     isExternalPurchase: false,
@@ -253,7 +253,7 @@ export const SAMPLE_STORIES: SampleStory[] = [
     subtitle: "Early Manuscript Preview • Slated for New York Times Square Feature",
     readTime: "3 min sample",
     setting: "Emotional Intelligence & Self-Mastery",
-    purchaseUrl: "#booking",
+    purchaseUrl: "/contact",
     purchaseLabel: "Request Pre-Order Notification",
     excerpt: [
       "On a chessboard, the Queen is the single piece capable of moving any distance forward, backward, sideways, or diagonally. Yet her strength means nothing if she moves in panic. One rushed reaction into an unguarded square costs the entire game.",
@@ -271,7 +271,7 @@ export const SAMPLE_STORIES: SampleStory[] = [
     subtitle: "Carrying Forward the Hardenian Standard at GSHA Quality Services",
     readTime: "4 min sample",
     setting: "Legacy & Performance Mindset",
-    purchaseUrl: "#booking",
+    purchaseUrl: "/contact",
     purchaseLabel: "Inquire for Speaking & Group Workshops",
     excerpt: [
       "When Greg Harden looked across a room at an Olympic swimmer, a championship quarterback, or a community leader, he never started with trophies. He started with the person behind the performance. Can you tell yourself the truth? Can you bet on yourself without apology?",
