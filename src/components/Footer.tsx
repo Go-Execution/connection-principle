@@ -32,6 +32,9 @@ export function Footer() {
             <Link href="/books" className="text-[#A6A39B] hover:text-[#F5F2EB] transition-colors whitespace-nowrap">
               Books & Chapters
             </Link>
+            <Link href="/gallery" className="text-[#A6A39B] hover:text-[#F5F2EB] transition-colors whitespace-nowrap">
+              Gallery
+            </Link>
             <Link href="/contact" className="text-[#A6A39B] hover:text-[#F5F2EB] transition-colors whitespace-nowrap">
               Contact & Press
             </Link>

@@ -10,7 +10,8 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services & Tour", href: "/services" },
-  { label: "Books & Chapters", href: "/books" },
+  { label: "Books", href: "/books" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 export function Navbar() {
